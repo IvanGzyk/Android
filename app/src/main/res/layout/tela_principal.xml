@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B9F6CA">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_lock_power_off"
+            tools:layout_editor_absoluteX="360dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="134dp"
+            android:layout_height="133dp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="157dp"
+            tools:srcCompat="@drawable/download" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="134dp"
+            android:layout_height="133dp"
+            tools:layout_editor_absoluteX="232dp"
+            tools:layout_editor_absoluteY="157dp"
+            tools:srcCompat="@drawable/images" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="134dp"
+            android:layout_height="133dp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="343dp"
+            tools:srcCompat="@drawable/informacoes" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="134dp"
+            android:layout_height="133dp"
+            tools:layout_editor_absoluteX="232dp"
+            tools:layout_editor_absoluteY="343dp"
+            tools:srcCompat="@drawable/sugestao" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
