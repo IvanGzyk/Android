@@ -19,35 +19,37 @@
             tools:layout_editor_absoluteY="5dp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/config"
             android:layout_width="134dp"
             android:layout_height="133dp"
             tools:layout_editor_absoluteX="61dp"
             tools:layout_editor_absoluteY="157dp"
-            tools:srcCompat="@drawable/download" />
+            tools:srcCompat="@drawable/engrenagem" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/salao"
             android:layout_width="134dp"
             android:layout_height="133dp"
             tools:layout_editor_absoluteX="232dp"
             tools:layout_editor_absoluteY="157dp"
-            tools:srcCompat="@drawable/images" />
+            tools:srcCompat="@drawable/ballons" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/financeiro"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            tools:layout_editor_absoluteX="61dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="37dp"
+            app:layout_constraintEnd_toStartOf="@+id/avisos"
             tools:layout_editor_absoluteY="343dp"
-            tools:srcCompat="@drawable/informacoes" />
+            tools:srcCompat="@drawable/afirmacao" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/avisos"
             android:layout_width="134dp"
             android:layout_height="133dp"
             tools:layout_editor_absoluteX="232dp"
             tools:layout_editor_absoluteY="343dp"
-            tools:srcCompat="@drawable/sugestao" />
+            tools:srcCompat="@drawable/quadro-de-noticias" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
