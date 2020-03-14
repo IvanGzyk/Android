@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -11,45 +12,68 @@
         android:background="#B9F6CA">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/sair"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_lock_power_off"
-            tools:layout_editor_absoluteX="360dp"
-            tools:layout_editor_absoluteY="5dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
+            app:srcCompat="@android:drawable/ic_lock_power_off" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/config"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="157dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/financeiro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.173"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.724"
             tools:srcCompat="@drawable/engrenagem" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/salao"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            tools:layout_editor_absoluteX="232dp"
-            tools:layout_editor_absoluteY="157dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/avisos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toEndOf="@+id/config"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.724"
             tools:srcCompat="@drawable/ballons" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/financeiro"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginRight="37dp"
-            app:layout_constraintEnd_toStartOf="@+id/avisos"
-            tools:layout_editor_absoluteY="343dp"
+            android:layout_marginBottom="240dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.173"
+            app:layout_constraintStart_toStartOf="parent"
             tools:srcCompat="@drawable/afirmacao" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/avisos"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            tools:layout_editor_absoluteX="232dp"
-            tools:layout_editor_absoluteY="343dp"
-            tools:srcCompat="@drawable/quadro-de-noticias" />
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toEndOf="@+id/financeiro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.598"
+            tools:srcCompat="@drawable/jornalista" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="402dp"
-        android:layout_height="348dp"
+        android:layout_width="285dp"
+        android:layout_height="349dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,24 +18,28 @@
         app:srcCompat="@drawable/inicial" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/site"
         android:layout_width="192dp"
         android:layout_height="111dp"
         android:scaleType="centerInside"
         android:scaleX=".4"
         android:scaleY=".4"
-        app:srcCompat="@drawable/www"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="-31dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/entrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/www" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/entrar"
         android:layout_width="163dp"
         android:layout_height="142dp"
         android:scaleType="centerInside"
         android:scaleX=".9"
         android:scaleY=".9"
-        app:srcCompat="@drawable/entrar"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="-44dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        app:srcCompat="@drawable/entrar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
