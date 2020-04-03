@@ -34,6 +34,7 @@
         android:id="@+id/entrar"
         android:layout_width="163dp"
         android:layout_height="142dp"
+        android:onClick="TeleDeLogin"
         android:scaleType="centerInside"
         android:scaleX=".9"
         android:scaleY=".9"

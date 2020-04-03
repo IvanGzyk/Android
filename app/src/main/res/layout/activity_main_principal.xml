@@ -53,7 +53,7 @@
             android:id="@+id/financeiro"
             android:layout_width="134dp"
             android:layout_height="133dp"
-            android:layout_marginBottom="240dp"
+            android:layout_marginBottom="188dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
