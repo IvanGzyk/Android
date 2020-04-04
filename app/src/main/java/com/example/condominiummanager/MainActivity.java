@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void TeleDeLogin(View v){
-        Intent tela = new Intent(this, Login.class);
+        Intent tela = new Intent(this, MainLoginActivity.class);
         startActivity(tela);
     }
 }
