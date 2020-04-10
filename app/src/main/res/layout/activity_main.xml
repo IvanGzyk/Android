@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D4D4D4"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,32 +15,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381"
         app:srcCompat="@drawable/inicial" />
 
-    <ImageButton
+    <Button
         android:id="@+id/site"
-        android:layout_width="192dp"
-        android:layout_height="111dp"
-        android:scaleType="centerInside"
-        android:scaleX=".4"
-        android:scaleY=".4"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/entrar"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="465dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginRight="208dp"
+        android:layout_marginBottom="90dp"
+        android:text="IR PARA O SITE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/www" />
+        tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <Button
         android:id="@+id/entrar"
-        android:layout_width="163dp"
-        android:layout_height="142dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginLeft="208dp"
+        android:layout_marginTop="465dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="90dp"
         android:onClick="TeleDeLogin"
-        android:scaleType="centerInside"
-        android:scaleX=".9"
-        android:scaleY=".9"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        android:text="ENTRAR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51"
-        app:srcCompat="@drawable/entrar" />
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

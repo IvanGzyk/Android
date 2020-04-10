@@ -9,70 +9,117 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#B9F6CA">
-
-        <ImageButton
-            android:id="@+id/sair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.955"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023"
-            app:srcCompat="@android:drawable/ic_lock_power_off" />
+        android:background="#FFFFFF">
 
         <ImageButton
             android:id="@+id/config"
             android:layout_width="134dp"
-            android:layout_height="133dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="217dp"
+            android:layout_marginLeft="217dp"
+            android:layout_marginTop="322dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="147dp"
+            android:onClick="TelaConfig"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/financeiro"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.173"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.724"
-            tools:srcCompat="@drawable/engrenagem" />
+            android:src="@drawable/configuracao"
+            android:background="@null"/>
 
         <ImageButton
             android:id="@+id/salao"
             android:layout_width="134dp"
-            android:layout_height="133dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="322dp"
+            android:layout_marginEnd="214dp"
+            android:layout_marginRight="214dp"
+            android:layout_marginBottom="147dp"
+            android:onClick="TelaSalao"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/avisos"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.631"
-            app:layout_constraintStart_toEndOf="@+id/config"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.724"
-            tools:srcCompat="@drawable/ballons" />
+            android:src="@drawable/salao"
+            android:background="@null"/>
 
         <ImageButton
             android:id="@+id/financeiro"
             android:layout_width="134dp"
-            android:layout_height="133dp"
-            android:layout_marginBottom="188dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="217dp"
+            android:layout_marginLeft="217dp"
+            android:layout_marginTop="172dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="297dp"
+            android:onClick="TelaFinanceiro"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.173"
             app:layout_constraintStart_toStartOf="parent"
-            tools:srcCompat="@drawable/afirmacao" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/financeiro"
+            android:background="@null"/>
 
         <ImageButton
             android:id="@+id/avisos"
             android:layout_width="134dp"
-            android:layout_height="133dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="172dp"
+            android:layout_marginEnd="214dp"
+            android:layout_marginRight="214dp"
+            android:layout_marginBottom="297dp"
+            android:onClick="TelaAvisos"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toEndOf="@+id/financeiro"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.598"
-            tools:srcCompat="@drawable/jornalista" />
+            android:src="@drawable/avisos"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="119dp"
+            android:layout_marginLeft="119dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginEnd="119dp"
+            android:layout_marginRight="119dp"
+            android:layout_marginBottom="75dp"
+            android:onClick="TelaInicialSair"
+            android:text="SAIR DA PLATAFORMA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
+            android:layout_marginBottom="520dp"
+            android:text="SELECIONE UMA OPÇÃO ABAIXO"
+            android:textColor="#070707"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
