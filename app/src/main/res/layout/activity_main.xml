@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.381"
         app:srcCompat="@drawable/logo_condo" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/site"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
@@ -51,5 +51,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
