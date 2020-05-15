@@ -21,14 +21,14 @@
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
             android:layout_marginBottom="147dp"
+            android:background="@null"
             android:onClick="TelaConfig"
             android:scaleType="fitCenter"
+            android:src="@drawable/configuracao"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/configuracao"
-            android:background="@null"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/salao"
@@ -40,14 +40,14 @@
             android:layout_marginEnd="214dp"
             android:layout_marginRight="214dp"
             android:layout_marginBottom="147dp"
+            android:background="@null"
             android:onClick="TelaSalao"
             android:scaleType="fitCenter"
+            android:src="@drawable/salao"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/salao"
-            android:background="@null"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/financeiro"
@@ -59,14 +59,14 @@
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
             android:layout_marginBottom="297dp"
+            android:background="@null"
             android:onClick="TelaFinanceiro"
             android:scaleType="fitCenter"
+            android:src="@drawable/financeiro"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/financeiro"
-            android:background="@null"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/avisos"
@@ -78,15 +78,15 @@
             android:layout_marginEnd="214dp"
             android:layout_marginRight="214dp"
             android:layout_marginBottom="297dp"
+            android:background="@null"
             android:onClick="TelaAvisos"
             android:scaleType="fitCenter"
+            android:src="@drawable/avisos"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/avisos"
-            android:background="@null"/>
-
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--
         <Button
             android:id="@+id/sair"
             android:layout_width="wrap_content"
@@ -103,6 +103,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+            -->
+
 
         <TextView
             android:id="@+id/textView"
@@ -120,6 +122,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.condominiummanager.fragment_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

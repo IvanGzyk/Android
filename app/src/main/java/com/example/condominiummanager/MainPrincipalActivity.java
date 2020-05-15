@@ -3,7 +3,6 @@ package com.example.condominiummanager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +14,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
     ImageButton financeiro;
     ImageButton salao;
     ImageButton config;
-    Button sair;
+    //Button sair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
         financeiro = (ImageButton) findViewById(R.id.financeiro);
         salao = (ImageButton) findViewById(R.id.salao);
         config = (ImageButton) findViewById(R.id.config);
-        sair = (Button) findViewById(R.id.sair);
+        //sair = (Button) findViewById(R.id.sair);
 
     }
     public void TelaAvisos(View v){
@@ -49,8 +48,8 @@ public class MainPrincipalActivity extends AppCompatActivity {
         startActivity(tela);
     }
 
-    public void TelaInicialSair(View v){
-        Intent tela = new Intent(this, MainActivity.class);
-        startActivity(tela);
-    }
+    //public void TelaInicialSair(View v){
+       // Intent tela = new Intent(this, MainActivity.class);
+        //startActivity(tela);
+    //}
 }
