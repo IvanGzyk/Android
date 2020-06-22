@@ -10,9 +10,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainLoginActivity extends AppCompatActivity {
-    Button entrar;
-    EditText login;
-    EditText senha;
+    private Button entrar;
+    private EditText login;
+    private EditText senha;
+    private EditText senha_bd;
+    private EditText nome;
+    private UsuarioDAO dao;
+    private Conexao conexao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +27,19 @@ public class MainLoginActivity extends AppCompatActivity {
     login = (EditText) findViewById(R.id.cpfCnpj);
     senha = (EditText) findViewById(R.id.senha);
 }
+
     public void ProximaPagina(View v){
-        Toast.makeText(MainLoginActivity.this, "Bem vindo ao Cmanager!!!", Toast.LENGTH_LONG).show();
-        Intent tela = new Intent(this, MainPrincipalActivity.class);
-        startActivity(tela);
+        consultar(login.getText().toString());
+        Toast.makeText(MainLoginActivity.this, nome +"Bem vindo ao Cmanager!!!", Toast.LENGTH_LONG).show();
+        if (senha == senha_bd) {
+            Intent tela = new Intent(this, MainPrincipalActivity.class);
+            startActivity(tela);
+        }
+    }
+
+    public void consultar(String cpf){
+        Usuario usuarioconsulta = dao.consultar(cpf);
+        nome.setText(usuarioconsulta.getNome());
+        senha_bd.setText(usuarioconsulta.getSenha());
     }
 }
