@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 return true;
+            case R.id.Cadastrar:
+                Intent tela_cadastro = new Intent(this, MainCadastro.class);
+                startActivity(tela_cadastro);
+                return true;
             default:
         }
         return super.onOptionsItemSelected(item);

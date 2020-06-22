@@ -9,5 +9,8 @@
     <item android:id="@+id/entrar"
         android:title="Entrar"
         app:showAsAction="never"/>
+    <item android:id="@+id/Cadastrar"
+        android:title="Novo Usuario"
+        app:showAsAction="never"/>
 
 </menu>
