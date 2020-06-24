@@ -45,9 +45,9 @@ class EditalDAO {
         cv.put(aviso, edital.getAviso());
         cv.put(data_p, edital.getData_p());
         cv.put(date_r, edital.getDate_r());
-        banco.update(nome_tabela, cv, whereClause: "id = ?", new String[]{String.valueOf(edital.getId())});
+        banco.update(nome_tabela, cv, "id = ?", new String[]{String.valueOf(edital.getId())});
     }
     public void remover(String id){
-        banco.delete(nome_tabela, whereClause: "id = ?", new String[]{id});
+        banco.delete(nome_tabela, "id = ?", new String[]{id});
     }
 }

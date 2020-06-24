@@ -38,9 +38,9 @@ class ReclamacaoDAO {
         ContentValues cv = new ContentValues();
         cv.put(reclamacao, reclamacoes.getReclamacao());
         cv.put(usuario, reclamacoes.getUsuario());
-        banco.update(nome_tabela, cv, whereClause: "id = ?", new String[]{String.valueOf(reclamacoes.getId())});
+        banco.update(nome_tabela, cv, "id = ?", new String[]{String.valueOf(reclamacoes.getId())});
     }
     public void remover(String id){
-        banco.delete(nome_tabela, whereClause: "id = ?", new String[]{id});
+        banco.delete(nome_tabela, "id = ?", new String[]{id});
     }
 }

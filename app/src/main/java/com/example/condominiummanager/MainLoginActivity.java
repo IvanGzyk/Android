@@ -43,20 +43,5 @@ public class MainLoginActivity extends AppCompatActivity {
                 }
             }
         });
-
 }
-    //public void ProximaPagina(View v){
-    //    consultar(login.getText().toString());
-    //    Toast.makeText(MainLoginActivity.this, nome +"Bem vindo ao Cmanager!!!", Toast.LENGTH_LONG).show();
-    //    if (senha == senha_bd) {
-    //        Intent tela = new Intent(this, MainPrincipalActivity.class);
-    //        startActivity(tela);
-    //    }
-    //}
-
-    //public void consultar(String cpf){
-    //  Usuario usuarioconsulta = dao.consultar(cpf);
-    //  nome.setText(usuarioconsulta.getNome());
-    //  senha_bd.setText(usuarioconsulta.getSenha());
-    //}
 }

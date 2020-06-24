@@ -56,9 +56,9 @@ class UsuarioDAO {
         cv.put(cpf, usuario.getCpf());
         cv.put(senha, usuario.getSenha());
         cv.put(nome, usuario.getNome());
-        banco.update(nome_tabela, cv, whereClause: "cpf = ?", new String[]{String.valueOf(usuario.getCpf())});
+        banco.update(nome_tabela, cv, "cpf = ?", new String[]{String.valueOf(usuario.getCpf())});
     }
     public void remover(String cpf){
-        banco.delete(nome_tabela, whereClause: "cpf = ?", new String[]{cpf});
+        banco.delete(nome_tabela, "cpf = ?", new String[]{cpf});
     }
 }

@@ -1,9 +1,18 @@
 package com.example.condominiummanager;
 
 class Edital {
+    private int id;
     private String aviso;
     private String data_p;
     private String date_r;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getAviso() {
         return aviso;
