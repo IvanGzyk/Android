@@ -47,8 +47,4 @@ public class MainPrincipalActivity extends AppCompatActivity {
         startActivity(tela);
     }
 
-    //public void TelaInicialSair(View v){
-       // Intent tela = new Intent(this, MainActivity.class);
-        //startActivity(tela);
-    //}
 }
