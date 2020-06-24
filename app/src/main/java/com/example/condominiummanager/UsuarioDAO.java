@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 class UsuarioDAO {
     private Conexao conexao;
     private SQLiteDatabase banco;
+    private SQLiteDatabase checar;// Chama o SQLite
     private String cpf = "cpf";
     private String senha = "senha";
     private String nome = "nome";
@@ -14,10 +15,13 @@ class UsuarioDAO {
 
     public UsuarioDAO(){
     }
+
     public void setConexao(Conexao con){
         conexao = con;
         banco = conexao.getWritableDatabase();
+        checar = conexao.getReadableDatabase(); //verificação SELECT
     }
+
     public long inserir(Usuario usuario){
         ContentValues values = new ContentValues();
         values.put(cpf, usuario.getCpf());
@@ -25,6 +29,7 @@ class UsuarioDAO {
         values.put(nome, usuario.getNome());
         return banco.insert(nome_tabela, null, values);
     }
+
     public Usuario consultar(String cpf){
         Usuario u = new Usuario();
         String querry = "SELECT " + cpf + ", " + senha + ", " + nome + " FROM " + nome_tabela + " WHERE cpf="+cpf;
@@ -36,5 +41,14 @@ class UsuarioDAO {
             u.setNome(cursor.getString(2));
         }
         return u;
+    }
+    //Verifica login tipo bool
+    public boolean checklogin(String login, String senha) {
+        Cursor cursor = checar.rawQuery("select * from usuario where cpf=? and senha=?", new String[]{login, senha});
+        if (cursor.getCount() > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

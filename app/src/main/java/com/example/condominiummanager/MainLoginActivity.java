@@ -10,36 +10,53 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainLoginActivity extends AppCompatActivity {
-    private Button entrar;
-    private EditText login;
-    private EditText senha;
-    private EditText senha_bd;
-    private EditText nome;
-    private UsuarioDAO dao;
-    private Conexao conexao;
+    Button entrar;
+    EditText cpf, pass;
+    Conexao conexao;
+    UsuarioDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-    entrar = (Button) findViewById(R.id.entrar);
-    login = (EditText) findViewById(R.id.cpfCnpj);
-    senha = (EditText) findViewById(R.id.senha);
+        conexao = new Conexao(this);
+        dao = new UsuarioDAO();
+        dao.setConexao(conexao);
+        entrar = (Button) findViewById(R.id.entrar);
+        cpf = (EditText) findViewById(R.id.login);
+        pass = (EditText) findViewById(R.id.senha);
+
+        entrar.setOnClickListener(new View.OnClickListener () {
+            @Override
+            public void onClick(View v){
+                String login = cpf.getText().toString();
+                String senha = pass.getText().toString();
+                Boolean chkacesso = dao.checklogin(login, senha);
+
+                if(chkacesso == true) {
+                    Toast.makeText(MainLoginActivity.this, "Login feito com sucesso!!!", Toast.LENGTH_LONG).show();
+                    Intent tela = new Intent(MainLoginActivity.this, MainPrincipalActivity.class);
+                    startActivity(tela);
+                }else {
+                    Toast.makeText(MainLoginActivity.this, "Dados incorretos! Tente novamente.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
 }
+    //public void ProximaPagina(View v){
+    //    consultar(login.getText().toString());
+    //    Toast.makeText(MainLoginActivity.this, nome +"Bem vindo ao Cmanager!!!", Toast.LENGTH_LONG).show();
+    //    if (senha == senha_bd) {
+    //        Intent tela = new Intent(this, MainPrincipalActivity.class);
+    //        startActivity(tela);
+    //    }
+    //}
 
-    public void ProximaPagina(View v){
-        consultar(login.getText().toString());
-        Toast.makeText(MainLoginActivity.this, nome +"Bem vindo ao Cmanager!!!", Toast.LENGTH_LONG).show();
-        if (senha == senha_bd) {
-            Intent tela = new Intent(this, MainPrincipalActivity.class);
-            startActivity(tela);
-        }
-    }
-
-    public void consultar(String cpf){
-        Usuario usuarioconsulta = dao.consultar(cpf);
-        nome.setText(usuarioconsulta.getNome());
-        senha_bd.setText(usuarioconsulta.getSenha());
-    }
+    //public void consultar(String cpf){
+    //  Usuario usuarioconsulta = dao.consultar(cpf);
+    //  nome.setText(usuarioconsulta.getNome());
+    //  senha_bd.setText(usuarioconsulta.getSenha());
+    //}
 }

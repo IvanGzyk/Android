@@ -1,12 +1,14 @@
 package com.example.condominiummanager;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 class Conexao extends SQLiteOpenHelper {
-    private static final String name = "Cmanager.db";
-    private static final int version = 1;
+    public static final String name = "Cmanager.db";
+    public static final int version = 1;
 
     public Conexao(Context context) {
         super(context, name, null, version);
