@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainAvisos"></activity>
+        <activity
+            android:name=".MainRecalmacoes"
+            android:label="@string/title_activity_main_recalmacoes"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainCadastro"
             android:label="@string/title_activity_main_cadastro"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainBoletosActivity" />
         <activity android:name=".MainConfiguracoesActivity" />
         <activity android:name=".MainLoginActivity" />

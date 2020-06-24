@@ -22,18 +22,17 @@ public class MainPrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_principal);
 
         avisos = (ImageButton) findViewById(R.id.avisos);
-        financeiro = (ImageButton) findViewById(R.id.financeiro);
+        financeiro = (ImageButton) findViewById(R.id.reclamacoes);
         salao = (ImageButton) findViewById(R.id.salao);
         config = (ImageButton) findViewById(R.id.config);
-        //sair = (Button) findViewById(R.id.sair);
 
     }
     public void TelaAvisos(View v){
-        Intent tela = new Intent(this, MainBoletosActivity.class);
+        Intent tela = new Intent(this, MainAvisos.class);
         startActivity(tela);
     }
 
-    public void TelaFinanceiro(View v){
+    public void TeleReclamacoes(View v){
         Intent tela = new Intent(this, MainBoletosActivity.class);
         startActivity(tela);
     }

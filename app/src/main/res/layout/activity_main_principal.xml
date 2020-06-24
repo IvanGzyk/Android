@@ -50,7 +50,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/financeiro"
+            android:id="@+id/reclamacoes"
             android:layout_width="134dp"
             android:layout_height="134dp"
             android:layout_marginStart="217dp"
@@ -60,7 +60,7 @@
             android:layout_marginRight="60dp"
             android:layout_marginBottom="297dp"
             android:background="@null"
-            android:onClick="TelaFinanceiro"
+            android:onClick="TeleReclamacoes"
             android:scaleType="fitCenter"
             android:src="@drawable/financeiro"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -86,25 +86,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!--
-        <Button
-            android:id="@+id/sair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="119dp"
-            android:layout_marginLeft="119dp"
-            android:layout_marginTop="480dp"
-            android:layout_marginEnd="119dp"
-            android:layout_marginRight="119dp"
-            android:layout_marginBottom="75dp"
-            android:onClick="TelaInicialSair"
-            android:text="SAIR DA PLATAFORMA"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-            -->
-
 
         <TextView
             android:id="@+id/textView"
