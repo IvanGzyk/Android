@@ -21,7 +21,7 @@ class Conexao extends SQLiteOpenHelper {
         db.execSQL("create table reclamacao(id integer primary Key autoincrement,"+
                 "fk_usuario varchar(18), reclamacao varchar(500));");
         db.execSQL("create table edital(id integer primary Key autoincrement,"+
-                " aviso varchar(500), data_p varchar(11), data_r varchar(11));");
+                "aviso varchar(500), data_p varchar(11), data_r varchar(11));");
     }
 
     @Override

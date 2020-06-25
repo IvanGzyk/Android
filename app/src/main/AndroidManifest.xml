@@ -13,10 +13,6 @@
         <activity android:name=".MainReclamacoes" />
         <activity android:name=".MainAvisos" />
         <activity
-            android:name=".MainRecalmacoes"
-            android:label="@string/title_activity_main_recalmacoes"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MainCadastro"
             android:label="@string/title_activity_main_cadastro"
             android:theme="@style/AppTheme.NoActionBar" />

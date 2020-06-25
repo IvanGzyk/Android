@@ -12,7 +12,9 @@ public class MainAvisos extends AppCompatActivity {
     private EditText aviso;
     private EditText data_p;
     private EditText data_r;
+    private EditText busca;
     private Button bt_salvar;
+    private EditText edtID;
     private EditalDAO dao;
     private Conexao conexao;
 
@@ -24,16 +26,29 @@ public class MainAvisos extends AppCompatActivity {
 
         bt_salvar = findViewById(R.id.button3);
         aviso = findViewById(R.id.texto_avisos);
-        data_p = findViewById(R.id.editTextDate);
-        data_r = findViewById(R.id.editTextDate2);
+        data_p = findViewById(R.id.data_p);
+        data_r = findViewById(R.id.data_r);
+        busca = findViewById(R.id.a_busca);
         conexao = new Conexao(this);
         dao = new EditalDAO();
         dao.setConexao(conexao);
 
+        //Salvar
         bt_salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 salvar();
+            }
+        });
+
+        //Consultar
+        edtID = findViewById(R.id.a_busca);
+        bt_salvar = findViewById(R.id.bt_buscar);
+        bt_salvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = Integer.parseInt(edtID.getText().toString());
+                consultar(id);
             }
         });
     }
@@ -44,5 +59,11 @@ public class MainAvisos extends AppCompatActivity {
         e.setDate_r(data_r.getText().toString());
         long id = dao.inserir(e);
         Toast.makeText(this, "Aviso: " + id, Toast.LENGTH_LONG).show();
+    }
+    public void consultar(int id){
+        Edital e = dao.consultar(id);
+        aviso.setText(e.getAviso());
+        data_p.setText(e.getData_p());
+        data_r.setText(e.getDate_r());
     }
 }

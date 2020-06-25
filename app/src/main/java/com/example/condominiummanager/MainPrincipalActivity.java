@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class MainPrincipalActivity extends AppCompatActivity {
 
     ImageButton avisos;
-    ImageButton financeiro;
+    ImageButton reclamacoes;
     ImageButton salao;
     ImageButton config;
     //Button sair;
@@ -22,7 +22,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_principal);
 
         avisos = (ImageButton) findViewById(R.id.avisos);
-        financeiro = (ImageButton) findViewById(R.id.reclamacoes);
+        reclamacoes = (ImageButton) findViewById(R.id.reclamacoes);
         salao = (ImageButton) findViewById(R.id.salao);
         config = (ImageButton) findViewById(R.id.config);
 
@@ -33,7 +33,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
     }
 
     public void TeleReclamacoes(View v){
-        Intent tela = new Intent(this, MainRecalmacoes.class);
+        Intent tela = new Intent(this,MainReclamacoes.class);
         startActivity(tela);
     }
 
