@@ -30,9 +30,9 @@ class UsuarioDAO {
         return banco.insert(nome_tabela, null, values);
     }
 
-    public Usuario consultar(String cpf){
+    public Usuario consultar(String cpf_){
         Usuario u = new Usuario();
-        String querry = "SELECT " + cpf + ", " + senha + ", " + nome + " FROM " + nome_tabela + " WHERE cpf="+cpf;
+        String querry = "SELECT " + cpf + ", " + senha + ", " + nome + " FROM " + nome_tabela + " WHERE cpf=" + cpf_;
         Cursor cursor = banco.rawQuery(querry,null);
 
         while(cursor.moveToNext()){

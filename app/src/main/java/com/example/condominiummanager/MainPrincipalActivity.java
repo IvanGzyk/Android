@@ -43,7 +43,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
     }
 
     public void TelaConfig(View v){
-        Intent tela = new Intent(this, MainConfiguracoesActivity.class);
+        Intent tela = new Intent(this, MainUsuario.class);
         startActivity(tela);
     }
 

@@ -39,6 +39,5 @@ public class MainReclamacoes extends AppCompatActivity {
         r.setUsuario(usuario);//verificar como faz para pegar o cpf do usuario logado...
         long id = dao.inserir(r);
         Toast.makeText(this, "Reclamação: " + id, Toast.LENGTH_LONG).show();
-
     }
 }

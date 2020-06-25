@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainReclamacoes"></activity>
+        <activity android:name=".MainUsuario"></activity>
+        <activity android:name=".MainReclamacoes" />
         <activity android:name=".MainAvisos" />
         <activity
             android:name=".MainRecalmacoes"
@@ -20,7 +21,6 @@
             android:label="@string/title_activity_main_cadastro"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainBoletosActivity" />
-        <activity android:name=".MainConfiguracoesActivity" />
         <activity android:name=".MainLoginActivity" />
         <activity android:name=".MainPrincipalActivity" />
         <activity android:name=".MainActivity">
