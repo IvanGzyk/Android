@@ -11,9 +11,10 @@ import android.widget.Toast;
 public class MainReclamacoes extends AppCompatActivity {
     private Button bt_salvar;
     private ReclamacaoDAO dao;
+    private Usuario user;
     private Conexao conexao;
     private EditText reclame;
-    private String usuario;
+    private String usuario = user.getCpf();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MainReclamacoes extends AppCompatActivity {
         setContentView(R.layout.activity_main_reclamacoes);
 
         bt_salvar = findViewById(R.id.salvar_reclame);
-        reclame = findViewById(R.id.reclame) ;
+        reclame = findViewById(R.id.reclames);
         conexao = new Conexao(this);
         dao = new ReclamacaoDAO();
         dao.setConexao(conexao);
@@ -34,9 +35,10 @@ public class MainReclamacoes extends AppCompatActivity {
     }
     private void salvar(){
         Reclamacoes r = new Reclamacoes();
-        r.setReclamacao(reclamacao.getText().toString);
+        r.setReclamacao(reclame.getText().toString());
         r.setUsuario(usuario);//verificar como faz para pegar o cpf do usuario logado...
         long id = dao.inserir(r);
         Toast.makeText(this, "Reclamação: " + id, Toast.LENGTH_LONG).show();
+
     }
 }

@@ -33,7 +33,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
     }
 
     public void TeleReclamacoes(View v){
-        Intent tela = new Intent(this, MainBoletosActivity.class);
+        Intent tela = new Intent(this, MainRecalmacoes.class);
         startActivity(tela);
     }
 
