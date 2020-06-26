@@ -12,9 +12,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
 
     ImageButton avisos;
     ImageButton reclamacoes;
-    ImageButton salao;
     ImageButton config;
-    //Button sair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +21,7 @@ public class MainPrincipalActivity extends AppCompatActivity {
 
         avisos = (ImageButton) findViewById(R.id.avisos);
         reclamacoes = (ImageButton) findViewById(R.id.reclamacoes);
-        salao = (ImageButton) findViewById(R.id.salao);
-        config = (ImageButton) findViewById(R.id.config);
+        config = (ImageButton) findViewById(R.id.usuario);
 
     }
     public void TelaAvisos(View v){
@@ -34,11 +31,6 @@ public class MainPrincipalActivity extends AppCompatActivity {
 
     public void TeleReclamacoes(View v){
         Intent tela = new Intent(this,MainReclamacoes.class);
-        startActivity(tela);
-    }
-
-    public void TelaSalao(View v){
-        Intent tela = new Intent(this, MainBoletosActivity.class);
         startActivity(tela);
     }
 

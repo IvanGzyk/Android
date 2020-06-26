@@ -35,7 +35,7 @@ public class MainLoginActivity extends AppCompatActivity {
                 Boolean chkacesso = dao.checklogin(login, senha);
 
                 if(chkacesso == true) {
-                    Toast.makeText(MainLoginActivity.this, "Login feito com sucesso!!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainLoginActivity.this, "Login feito com sucesso!", Toast.LENGTH_LONG).show();
                     Intent tela = new Intent(MainLoginActivity.this, MainPrincipalActivity.class);
                     startActivity(tela);
                 }else {

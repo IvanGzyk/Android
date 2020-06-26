@@ -29,7 +29,7 @@
 
         <EditText
             android:id="@+id/login"
-            android:layout_width="376dp"
+            android:layout_width="350dp"
             android:layout_height="39dp"
             android:layout_marginStart="79dp"
             android:layout_marginLeft="79dp"
@@ -63,7 +63,7 @@
 
         <Button
             android:id="@+id/entrar"
-            android:layout_width="376dp"
+            android:layout_width="350dp"
             android:layout_height="49dp"
             android:layout_marginStart="79dp"
             android:layout_marginLeft="79dp"
@@ -80,7 +80,7 @@
 
         <EditText
             android:id="@+id/senha"
-            android:layout_width="376dp"
+            android:layout_width="350dp"
             android:layout_height="39dp"
             android:layout_marginStart="79dp"
             android:layout_marginLeft="79dp"

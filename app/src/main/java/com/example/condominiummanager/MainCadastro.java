@@ -2,11 +2,7 @@ package com.example.condominiummanager;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +22,7 @@ public class MainCadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_cadastro);
 
-        bt_salvar = findViewById(R.id.salvar);
+        bt_salvar = findViewById(R.id.bt_salvar);
         cpfCnpj = findViewById(R.id.cpfCnpj);
         senha = findViewById(R.id.senha);
         nome = findViewById(R.id.nome);
